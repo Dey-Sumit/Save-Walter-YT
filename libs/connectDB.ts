@@ -7,12 +7,12 @@ async function dbConnect() {
     // already connected
     return;
   }
-  //   mongoose.connection.on("connected", () => {
-  //     console.log("connected to mongo db");
-  //   });
-  //   mongoose.connection.on("error", (err) => {
-  //     console.log(`db connection problem`, err);
-  //   });
+  mongoose.connection.on("connected", () => {
+    console.log("connected to mongo db");
+  });
+  mongoose.connection.on("error", (err) => {
+    console.log(`db connection problem`, err.message);
+  });
   return mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
