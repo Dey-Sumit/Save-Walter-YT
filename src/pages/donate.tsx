@@ -43,7 +43,7 @@ const donate = () => {
 
   const addDonationInDB = async (name: string) => {
     try {
-      const res = await fetch("http://localhost:3001/api/donation", {
+      const res = await fetch(`${process.env.VERCEL_URL}/api/donation`, {
         method: "POST",
         body: JSON.stringify({
           name,

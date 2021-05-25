@@ -46,7 +46,7 @@ export default stats;
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   let data;
   try {
-    const res = await fetch("http://localhost:3001/api/donation");
+    const res = await fetch(`${process.env.VERCEL_URL}/api/donation`);
     data = await res.json();
   } catch (error) {
     console.log(error);
