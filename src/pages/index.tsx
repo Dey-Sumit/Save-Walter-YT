@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 const index = () => {
+  console.log(`${process.env.VERCEL_URL}`);
+
   return (
     <div className="grid p-5 md:grid-cols-2 lg:px-24">
       <div className="textBlock-wrapper">
