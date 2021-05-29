@@ -26,15 +26,15 @@ const Navbar = () => {
       </Link>
 
       <div className="flex space-x-6 text-base uppercase md:text-xl">
-        <Link href="/donate">
-          <a className={pathname === "/donate" ? "text-yellow " : ""}>Donate</a>
-        </Link>
-        <Link href="/stats">
-          <a className={pathname === "/stats" ? "text-yellow " : ""}>stats</a>
-        </Link>
-        <Link href="/family">
-          <a className={pathname === "/family" ? "text-yellow " : ""}>family</a>
-        </Link>
+        <a className={pathname === "/donate" ? "text-yellow " : ""}>
+          <Link href="/donate">Donate</Link>
+        </a>
+        <a className={pathname === "/stats" ? "text-yellow " : ""}>
+          <Link href="/stats">stats</Link>
+        </a>
+        <a className={pathname === "/family" ? "text-yellow " : ""}>
+          <Link href="/family">family</Link>
+        </a>
       </div>
     </div>
   );

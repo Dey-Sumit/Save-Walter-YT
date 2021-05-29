@@ -43,13 +43,16 @@ const donate = () => {
 
   const addDonationInDB = async (name: string) => {
     try {
-      const res = await fetch(`${process.env.VERCEL_URL}/api/donation`, {
-        method: "POST",
-        body: JSON.stringify({
-          name,
-          amount,
-        }),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_ENDPOINT}/api/donation`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name,
+            amount,
+          }),
+        }
+      );
       const data = await res.json();
       console.log(data);
     } catch (error) {
