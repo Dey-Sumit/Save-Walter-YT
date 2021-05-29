@@ -15,9 +15,12 @@ const family: NextPage<{ quotes: IQuote[] }> = ({ quotes }) => {
 
       <div className="flex flex-col justify-center space-y-3">
         {quotes.map((quote) => (
-          <div className="flex p-3 px-6 space-x-3 text-sm rounded-lg md:text-base bg-gray-dark">
+          <div
+            className="flex p-3 px-6 space-x-3 text-sm rounded-lg md:text-base bg-gray-dark"
+            key={quote.name}
+          >
             <div className="flex-shrink-0 text-center">
-              <div>
+              <div className="imageWrapper">
                 <Image
                   src={quote.pictureURL}
                   width={60}
