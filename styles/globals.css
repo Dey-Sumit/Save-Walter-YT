@@ -20,3 +20,8 @@ body {
     @apply text-base lg:text-lg;
   }
 }
+.imageWrapper > div {
+  border-width: 3px;
+  border-radius: 50%;
+  border-color: #f8d500;
+}

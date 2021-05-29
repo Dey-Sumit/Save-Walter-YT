@@ -44,7 +44,7 @@ const donate = () => {
   const addDonationInDB = async (name: string) => {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_ENDPOINT}/api/donation`,
+        `${process.env.NEXT_PUBLIC_API_BASE_ENDPOINT}api/donation`,
         {
           method: "POST",
           body: JSON.stringify({

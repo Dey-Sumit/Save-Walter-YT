@@ -7,7 +7,7 @@ const family: NextPage<{ quotes: IQuote[] }> = ({ quotes }) => {
   return (
     <div className="grid h-full gap-5 p-5 md:grid-cols-2 lg:px-24">
       <div className="textBlock-wrapper">
-        <h1 className="mb-4 text-2xl textBlock-title text-yellow md:text-5xl">
+        <h1 className="mb-4 text-2xl textBlock-title md:text-5xl">
           <span className="font-bold text-yellow">Family &</span> Friends
         </h1>
         <p className="textBlock-subtitle">Notes from family & friends</p>
